@@ -5,13 +5,13 @@ describe("Stack", function() {
 		
 		pilha.push(1);
 		
-		expect(pilha.isEmpty()).toEqual(false);
+		expect(pilha.isEmpty()).toBe(false);
 	});
 	
 	it("Deve saber que a pilha está vazia", function() {
 		var pilha = new Stack();
 		
-		expect(pilha.isEmpty()).toEqual(true);
+		expect(pilha.isEmpty()).toBe(true);
 	});
 	
 	it("Deve implementar o LIFO (Last In, First Out) : a retirada é do elemento que está no topo.", function() {
@@ -63,5 +63,12 @@ describe("Stack", function() {
 		
 		expect(pilha.size()).toEqual(4);
 	});
+	
+	it("Chamar o pop() em uma pilha sem elementos deve lançar uma exceção", function() {
+		var pilha = new Stack();
+		
+		expect(function() {pilha.pop()}).toThrow(new Error("Pilha está vazia!"));
+	})
+	
 	
 }); 

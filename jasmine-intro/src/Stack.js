@@ -11,6 +11,9 @@ function Stack() {
 		},
 		
 		pop : function () {
+			if(this.isEmpty()) {
+				throw new Error("Pilha está vazia!");
+			}
 			return itens.pop();
 		},
 		
