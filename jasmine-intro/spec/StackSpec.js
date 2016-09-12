@@ -38,7 +38,7 @@ describe("Stack", function() {
 		expect(item).toEqual(5);
 	});
 	
-	it("Chamar o pop() deve remover o elemento da pilha.", function() {
+	it("Chamar o pop() deve remover o elemento do topo da pilha.", function() {
 		var pilha = new Stack();
 		
 		pilha.push(1);

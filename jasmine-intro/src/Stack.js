@@ -3,7 +3,6 @@ function Stack() {
 	
 	var itens = new Array();
 	
-	
 	return {
 		
 		push : function(item) {
